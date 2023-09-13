@@ -1,0 +1,416 @@
+:root{
+  --amarelo:#fad300;
+  --verdeClaro:#80cbd9;
+  --azul:#098bfa;
+  --azulClaro:#e7f5fe;
+  --roxo: #b721dc;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a:link, a:visited, a:hover, a:active{
+	text-decoration: none;
+	color:white;
+  cursor: pointer;
+  outline: 0;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  background: rgb(196,197,249);
+  background: radial-gradient(circle, rgb(156, 157, 247) 0%, rgb(204, 215, 249) 100%);
+}
+
+/*------------
+--------------
+--------------
+Login
+--------------
+--------------
+--------------*/
+
+#login{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #0b8ef9;
+}
+#login .conteudo{
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+#login .conteudo .logo{
+  max-width: 400px;
+}
+#login .conteudo .box{
+  margin-top: -20px;
+}
+.roda{
+  opacity: .2;
+  position: absolute;
+  top:-75%;
+  left: -75%;
+  width: 250%;
+  height: 250%;
+  z-index: -1;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration:80s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+  -moz-animation-name: rotate;
+  -moz-animation-duration:80s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-timing-function:linear;
+}
+#login .roda{
+  z-index: 0;;
+}
+#login .btLogin{
+  background-color: var(--azul);
+  border:0px;
+  color: var(--amarelo);
+  width: 100%;
+  border-radius: 8px;
+  padding: 7px 10px;
+  text-align: center;
+  font-weight: 900;
+  outline-width: 0;
+  transition: all ease-out .3s;
+}
+#login .btLogin:hover{
+  background-color: var(--amarelo);
+  color: var(--azul);
+}
+
+#login .esqueciMinhaSenhaDiv{
+  padding-top: 20px;
+}
+#login .esqueciMinhaSenha{
+  text-decoration: none;
+}
+#login .esqueciMinhaSenha:hover{
+  color: #FFF!important;
+}
+
+@-webkit-keyframes rotate {
+  from {-webkit-transform:rotate(0deg);}
+  to {  -webkit-transform:rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+  from {-moz-transform:rotate(0deg);}
+  to {  -moz-transform:rotate(360deg);}
+}
+
+
+
+
+/*------------
+--------------
+--------------
+Internas
+--------------
+--------------
+--------------*/
+
+.navbar-fixed-top, .navbar-static-top {
+  background: inherit;
+}
+.barraLateral{
+  background-color: var(--roxo);
+  background-image: url(../img/bgLateral.png);
+  background-repeat: repeat-y;
+  text-align: center;
+  min-height: 100vh;;
+  color: white;
+  font-size: 12px;
+}
+.barraLateral .logo{
+  max-width: 80%;
+}
+.barraLateral .thumbUser{
+  width: 50%;
+}
+.conteudo .box{
+  padding: 50px;
+}
+
+.resgate{
+  width: fit-content;
+  color: #098bfa;
+  font-weight: 700;
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+.resgate .quantidade{
+  font-size: 80px;
+  line-height: 80px;
+}
+.resgate .eba{
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.extrato{
+  border-color: var(--amarelo) !important;
+  background-color: var(--roxo) !important;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 20px;
+  width: fit-content;
+  padding: 15px 50px !important;
+}
+
+.linha{
+  border-left: 5px solid var(--amarelo);
+  margin: 0px 5px 0px 10px;
+  padding-left: 5px;
+}
+.ganhou, .resgatou{
+  color: #FFF;
+  padding: 5px 35px!important;
+  border-width: 5px !important;
+}
+.ganhou .grande,
+.resgatou .grande{
+  line-height: 18px;
+  color: #098bfa;
+  font-weight: 700;
+}
+.espacoExtrato,
+.espacoExtrato{
+  margin: 5px 0px !important;
+  width: 350px;
+}
+.box.resgatou{
+  background-color: #f8ca07;
+  border-color: #b721dc;
+  color: #60557b;
+}
+
+
+/*------------
+--------------
+--------------
+Conf
+--------------
+--------------
+--------------*/
+h1{
+  font-weight: 700;
+  color: var(--azul);
+}
+.nav > li > a {
+  color: inherit;
+  font-weight: inherit;
+  padding: 0px;
+  display: inherit;
+}
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus {
+  background-color: inherit;
+  color: inherit;
+}
+.titulo{
+  font-weight: 700;
+  font-size: 20px;
+}
+.nav-header2{
+  padding: 20px 10px;
+  background-color: var(--roxo) !important;
+}
+.navbar-header .btn{
+  background-color: var(--azul);
+  z-index: 9999;
+}
+.bt{
+  border-radius: 100px;
+  padding: 10px 20px;
+  border: 2px var(--amarelo) solid !important;
+  width: fit-content;
+  outline-width: 0;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  background-color: var(--roxo);
+  color: white;
+}
+.bt:hover{
+  background-color: var(--amarelo);
+  color: var(--roxo);
+}
+li.bt.mx-2.active {
+  background-color: var(--amarelo)!important;
+}
+li.bt.mx-2.active a{
+  color: var(--roxo)!important;
+}
+
+.box{
+  position: relative;
+  background-color: var(--verdeClaro)!important;
+  padding: 30px 50px;
+  border-radius: 50px;
+  border:10px solid var(--amarelo);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.44), inset 0px 0px 10px 1px rgba(0,0,0,0.24);
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.44), inset 0px 0px 10px 1px rgba(0,0,0,0.24);
+}
+hr{
+  border-top: 1px solid #FFF;
+}
+label{
+  font-weight: 700;
+  color: var(--azul);
+}
+.textoPadrao{
+  color: white;
+  font-weight: 700;
+}
+input{
+  border: 3px solid var(--azul);
+  border-radius: 8px;
+  padding: 7px 10px;
+  text-align: center;
+  width: 100%;
+  outline-width: 0;
+  color: #098bfa;
+  font-weight: 900;
+}
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+::-webkit-input-placeholder {
+  color: #098bfa;
+  font-weight: 900;
+}
+:-ms-input-placeholder {
+  color: #098bfa;
+  font-weight: 900;
+}
+::placeholder {
+  color: #098bfa;
+  font-weight: 900;
+}
+
+body.mini-navbar .navbar-default .nav > li > a {
+  font-size: 12px;
+}
+body.mini-navbar .navbar-default .nav > li > a i {
+  margin-right: 0px;
+}
+body.mini-navbar .navbar-default .nav > .bt {
+  text-align: center;
+  padding: 5px;
+}
+
+.nav.navbar-right > li > a{
+  color: #FFF;
+}
+
+.rodaInterna{
+  width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 100px;
+    z-index: -1;
+}
+
+.sgato{
+  position: absolute; left: 0px; bottom: -45px;
+  width: 100px;
+  -webkit-animation: rotation 60s infinite linear;
+}
+.scofre{
+  position: absolute; right: -20px; top: -50px;
+  width: 90px;
+  -webkit-animation: rotationReverso 60s infinite linear;
+}
+.snutela{
+  position: absolute; left: -20px; top: -60px;
+  width: 110px;
+  -webkit-animation: rotation 60s infinite linear;
+}
+.scatco{
+  position: absolute; right: 0px; bottom: -45px;
+  width: 70px;
+  -webkit-animation: rotation 60s infinite linear;
+}
+.spizza{
+  position: absolute;
+    right: -20px;
+    top: -30px;
+    width: 80px;
+    -webkit-animation: rotation 60s infinite linear;
+}
+
+.logoMobile{
+  height: 40px;
+    margin: 5px;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+      -webkit-transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotationReverso {
+  0% {
+      -webkit-transform: rotate(360deg);
+  }
+  100% {
+      -webkit-transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  #login .logo{
+    width: 80%;
+  }
+  #login .conteudo .box{
+    margin: 0px 10%;
+  }
+  .bt{
+    width: 100%;
+  }
+  body{
+    font-size: 14px;
+  }
+  .row{
+    text-align: center;
+  }
+  .resgate{
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .linha{
+    display: none;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  .espacoExtrato, .espacoExtrato {
+      margin: 5px 0px !important;
+      width: inherit;
+  }
+
+  .rodaInterna{
+      left: 0px;
+  }
+}
